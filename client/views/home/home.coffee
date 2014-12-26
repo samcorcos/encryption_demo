@@ -1,5 +1,27 @@
 Numbers = new Mongo.Collection(null)
 
+Template.home.events
+  'keyup #prime1': (e,t) ->
+    Numbers.p = e.currentTarget.value
+    Numbers.n = Numbers.p * Numbers.q
+    Numbers.phi = (Numbers.p - 1) * (Numbers.q - 1)
+
+  'keyup #prime2': (e,t) ->
+    Numbers.q = e.currentTarget.value
+    Numbers.n = Numbers.p * Numbers.q
+    Numbers.phi = (Numbers.p - 1) * (Numbers.q - 1)
+
+
+
+Template.outputs.helpers
+  p: -> Numbers.p
+  q: -> Numbers.q
+  n: -> Numbers.n
+  phi: -> Numbers.phi
+
+  
+
+
 #I'm going to store the variables for the calculation in the client-side collection
 
 

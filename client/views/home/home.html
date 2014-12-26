@@ -1,25 +1,43 @@
 <template name="home">
 	<div class="container">
 		<div class="row">
-			<div class="col s12 m6">
-				<div class="card">
-					<div class="card-content">
-						<h2>Input</h2>
-						<form action="">
-							<h3>Select two distinct prime numbers</h3>
-							<input type="text" placeholder="Prime 1">
-							<input type="text" placeholder="Prime 2">
-							<button class="btn">Submit</button>
-						</form>
-					</div>
-				</div>
+			{{> inputs}}
+			{{> outputs}}
+		</div>
+	</div>
+</template>
+
+
+
+<template name="inputs">
+	<div class="col s12 m6">
+		<div class="card">
+			<div class="card-content">
+				<h2>Input</h2>
+				<form action="">
+					<p>Select two distinct prime numbers</p>
+					<input type="text" id="prime1" placeholder="Prime 1">
+					<input type="text" id="prime2" placeholder="Prime 2">
+				</form>
+				<form action="">
+					<p>Select a number "e" that is greater than 1, and less than phi. Phi and "e" must also be coprime. (Selecting a prime number will always be coprime)</p>
+					<input type="text" id="e" placeholder="Public Key Exponent">
+				</form>
 			</div>
-			<div class="col s12 m6">
-				<div class="card">
-					<div class="card-content">
-						<h2>Output</h2>
-					</div>
-				</div>
+		</div>
+	</div>
+</template>
+
+
+<template name="outputs">
+	<div class="col s12 m6">
+		<div class="card">
+			<div class="card-content">
+				<h2>Output</h2>
+				<ul>
+					<li>Prime 1 (p): {{p}}</li>
+					<li>Prime 2 (q): {{q}}</li>
+				</ul>
 			</div>
 		</div>
 	</div>
