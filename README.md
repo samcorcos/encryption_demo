@@ -1,3 +1,7 @@
-#Boilerplate Materialize
+#Encryption Demo
 
-Boilerplate Meteor 1.0 site with Materialize instead of Bootstrap
+This demo serves to demonstrate the basics of public-private key encryption.
+
+##To Do
+
+- Create a UI that shows the computations being performed
